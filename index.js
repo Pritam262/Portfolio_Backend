@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
-mongoose.connect('mongodb+srv://pritamjana3600:pxUXkyyEINogZkQg@cluster0.clq4tow.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_URI)
 // let myschema = mongoose.Schema({
 //         Picture : {
 //             type:String
